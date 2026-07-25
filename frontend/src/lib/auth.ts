@@ -1,12 +1,4 @@
-import {
-  onAuthStateChanged,
-  getAuth,
-  signInWithRedirect,
-  getRedirectResult,
-  GoogleAuthProvider,
-  signOut,
-  type User as FirebaseUser
-} from "firebase/auth";
+import { onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signOut, type User as FirebaseUser } from "firebase/auth";
 import { getFirebaseApp } from "./firebase";
 import { authApi, getStoredToken, saveAuthSession, clearAuthSession } from "./api";
 
@@ -38,14 +30,11 @@ export async function firebaseSignInWithGoogle() {
   }
 
   const provider = new GoogleAuthProvider();
-
-  provider.setCustomParameters({
-    prompt: "select_account",
-  });
-
-  await signInWithRedirect(auth, provider);
-
-  return null;
+  const result = await signInWithPopup(auth, provider);
+  const idToken = await result.user.getIdToken();
+  const response = await authApi.firebaseAuthenticate({ idToken });
+  saveAuthSession(response.data);
+  return response.data;
 }
 
 export async function firebaseSignOut() {
@@ -98,7 +87,6 @@ export function subscribeToAuthStateChange(onChanged: (user: UserSession | null)
   }
 
   return onAuthStateChanged(auth, async (user) => {
-    console.log("onAuthStateChanged:", user);
     if (!user) {
       clearAuthSession();
       onChanged(null);
@@ -106,13 +94,8 @@ export function subscribeToAuthStateChange(onChanged: (user: UserSession | null)
     }
 
     try {
-      const redirectResult = await getRedirectResult(auth);
-      console.log("Redirect result inside auth state:", redirectResult?.user ?? null);
-
-      const idToken = await user.getIdToken(true);
-      console.log("Firebase ID token acquired");
+      const idToken = await user.getIdToken();
       const response = await authApi.firebaseAuthenticate({ idToken });
-      console.log("Backend firebase auth response", response);
       saveAuthSession(response.data);
       onChanged(response.data);
     } catch (error) {
