@@ -28,11 +28,17 @@ function AuthRoute() {
 
     const auth = getAuth(app);
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
+      console.log("/auth onAuthStateChanged", user);
+
+      const token = getStoredToken();
+
+      if (user && token) {
         navigate({ to: "/app" });
-      } else {
+      } else if (!user) {
+        clearAuthSession();
         navigate({ to: "/login" });
       }
+
       setInitialized(true);
     });
 
