@@ -18,19 +18,22 @@ function LoginPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleGoogleSignIn = async () => {
-    setError(null);
-    setIsSubmitting(true);
+ const handleGoogleSignIn = async () => {
+  setError(null);
+  setIsSubmitting(true);
 
-    try {
-      await firebaseSignInWithGoogle();
-      navigate({ to: "/app" });
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Unable to sign in with Google.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  try {
+    await firebaseSignInWithGoogle();
+  } catch (err) {
+    setError(
+      err instanceof Error
+        ? err.message
+        : "Unable to sign in with Google."
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div className="relative min-h-screen overflow-hidden">

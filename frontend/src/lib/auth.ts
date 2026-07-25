@@ -1,4 +1,12 @@
-import { onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signOut, type User as FirebaseUser } from "firebase/auth";
+import {
+  onAuthStateChanged,
+  getAuth,
+  signInWithRedirect,
+  getRedirectResult,
+  GoogleAuthProvider,
+  signOut,
+  type User as FirebaseUser
+} from "firebase/auth";
 import { getFirebaseApp } from "./firebase";
 import { authApi, getStoredToken, saveAuthSession, clearAuthSession } from "./api";
 
@@ -30,11 +38,14 @@ export async function firebaseSignInWithGoogle() {
   }
 
   const provider = new GoogleAuthProvider();
-  const result = await signInWithPopup(auth, provider);
-  const idToken = await result.user.getIdToken();
-  const response = await authApi.firebaseAuthenticate({ idToken });
-  saveAuthSession(response.data);
-  return response.data;
+
+  provider.setCustomParameters({
+    prompt: "select_account",
+  });
+
+  await signInWithRedirect(auth, provider);
+
+  return null;
 }
 
 export async function firebaseSignOut() {
