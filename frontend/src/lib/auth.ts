@@ -13,6 +13,17 @@ import { authApi, getStoredToken, saveAuthSession, clearAuthSession } from "./ap
 const firebaseApp = getFirebaseApp();
 const auth = firebaseApp ? getAuth(firebaseApp) : null;
 
+// Complete pending Google redirect sign-in after the app reloads.
+if (auth) {
+  getRedirectResult(auth)
+    .then((result) => {
+      console.log("Firebase redirect result:", result?.user ?? null);
+    })
+    .catch((error) => {
+      console.error("Firebase redirect sign-in failed", error);
+    });
+}
+
 export type UserSession = {
   uid: string;
   email?: string | null;
@@ -98,6 +109,7 @@ export function subscribeToAuthStateChange(onChanged: (user: UserSession | null)
   }
 
   return onAuthStateChanged(auth, async (user) => {
+    console.log("onAuthStateChanged:", user);
     if (!user) {
       clearAuthSession();
       onChanged(null);
@@ -106,7 +118,9 @@ export function subscribeToAuthStateChange(onChanged: (user: UserSession | null)
 
     try {
       const idToken = await user.getIdToken();
+      console.log("Firebase ID token acquired");
       const response = await authApi.firebaseAuthenticate({ idToken });
+      console.log("Backend firebase auth response", response);
       saveAuthSession(response.data);
       onChanged(response.data);
     } catch (error) {

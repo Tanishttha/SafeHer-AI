@@ -49,7 +49,10 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
     });
   }
 
-  const response = await fetch(buildUrl(path), {
+  const url = buildUrl(path);
+  console.log(`[API] ${rest.method ?? "GET"} ${url}`, body);
+
+  const response = await fetch(url, {
     ...rest,
     headers: requestHeaders,
     body:
@@ -59,6 +62,7 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
           ? (body as BodyInit)
           : JSON.stringify(body),
   });
+  console.log(`[API] ${response.status} ${url}`);
 
   const contentType = response.headers.get("content-type") || "";
   const payload = contentType.includes("application/json") ? await response.json() : await response.text();
@@ -79,6 +83,8 @@ export function saveAuthSession(data: { accessToken: string; refreshToken: strin
   if (typeof window === "undefined") {
     return;
   }
+
+  console.log("Saving auth session", data);
 
   window.localStorage.setItem("accessToken", data.accessToken);
   window.localStorage.setItem("refreshToken", data.refreshToken);
