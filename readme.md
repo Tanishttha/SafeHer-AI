@@ -209,4 +209,3 @@ http://localhost:5000
 - Anonymous Community Reporting
 <h2>License</h2>
 This project is developed for educational, research, and social impact purposes.
-<h2 align="center">If you found this project helpful, consider giving it a Star!</h2>
