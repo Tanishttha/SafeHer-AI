@@ -199,9 +199,6 @@ npx cap copy
 Open Android Studio
 
 npx cap open android
-
-⸻
-
 <h2>Android Permissions</h2>
 
 * Internet
@@ -212,9 +209,6 @@ npx cap open android
 * Vibration
 * Foreground Service
 * Wake Lock
-
-⸻
-
 <h2>Future Scope</h2>
 
 * Background AI Monitoring
