@@ -182,9 +182,9 @@ http://localhost:5000
   <img src="assets/4.png" alt="SS2" width="48%">
 </p>
 <h2>Deployment</h2>
-<h4>Frontend - Vercel</h4>
-<h4>Backend - Render</h4>
-<h4>Database - MongoDB Atlas</h4>
+<p>Frontend - Vercel</p>
+<p>Backend - Render</p>
+<p>Database - MongoDB Atlas</p>
 <h2>Security Features</h2>
 
 - Google OAuth
