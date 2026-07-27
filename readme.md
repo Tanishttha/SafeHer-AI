@@ -9,7 +9,7 @@ https://safe-her-ai-blush.vercel.app
 ```
 <p>The backend is deployed on Render, which automatically goes to sleep after a period of inactivity. On the first visit, it may take <b>1-2 minutes</b> for the backend to wake up. Please wait briefly before using the application.</p>
 
-![System Architecture](assets/1.png)
+![System Architecture](assets/2.png)
 <h2>Features</h2>
 <h3>User Safety Features</h3>
 
@@ -97,27 +97,8 @@ https://safe-her-ai-blush.vercel.app
 - Vercel
 <h2>Project Structure</h2>
 
-```text
-SafeHer-AI/
-│
-├── client/
-│   ├── src/
-│   ├── public/
-│   ├── assets/
-│   └── package.json
-│
-├── server/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── prisma/
-│   ├── services/
-│   ├── utils/
-│   └── package.json
-│
-├── README.md
-└── package.json
-```
+
+![Project Structure](assets/project structure 2.png)
 
 ---
 
@@ -125,75 +106,91 @@ SafeHer-AI/
 <h3>Clone Repository</h3>
 
 ```bash
-git clone https://github.com/yourusername/SafeHer-AI.git
+git clone https://github.com/Tanishttha/SafeHer-AI
 cd SafeHer-AI
 ```
 <h3>Install Dependencies</h3>
-<p>Client</p>
+<p>Backend</p>
 
 ```bash
-cd client
+cd Backend
 npm install
 ```
-<p>Server</p>
+<p>Frontend</p>
 
 ```bash
-cd ../server
+cd ../Frontend
 npm install
 ```
 <h2>Environment Variables</h2>
-<h3>Server (.env)</h3>
-
-```env
-PORT=5000
-
-DATABASE_URL=YOUR_MONGODB_URI
-
-JWT_SECRET=YOUR_SECRET
-
-GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID
-GOOGLE_CLIENT_SECRET=YOUR_GOOGLE_CLIENT_SECRET
-
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-
-FRONTEND_URL=http://localhost:5173
-```
-<h3>Client (.env)</h3>
+<h3>Frontend (.env)</h3>
 
 ```env
 VITE_API_URL=http://localhost:5000/api
-VITE_GEOAPIFY_API_KEY=YOUR_KEY
+VITE_GEOAPIFY_API_KEY=YOUR_GEOAPIFY_API_KEY
+```
+<h3>Backend (.env)</h3>
+
+```env
+NODE_ENV=development
+PORT=5000
+Backend_URL=http://localhost:8080
+API_BASE_URL=http://localhost:5000
+
+# ---------- DATABASE ----------
+MONGODB_URI=YOUR_MONGODB_URI
+
+# ---------- BCRYPT ----------
+BCRYPT_SALT_ROUNDS=12
+
+# ---------- FIREBASE CLOUD MESSAGING ----------
+FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+FIREBASE_Backend_EMAIL=YOUR_FIREBASE_CLIENT_EMAIL
+FIREBASE_PRIVATE_KEY="YOUR_FIREBASE_PRIVATE_KEY"
+
+# ---------- GROQ AI CHATBOT ----------
+GROQ_API_KEY=YOUR_GROQ_API_KEY
+GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_API_URL=https://api.groq.com/openai/v1/chat/completions
+
+# ---------- RATE LIMITING ----------
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX=200
+SOS_RATE_LIMIT_MAX=100
+
+# ---------- SOCKET.IO ----------
+SOCKET_CORS_ORIGIN=http://localhost:8080
 ```
 <h2>Running the Project</h2>
 <h3>Backend</h3>
 
 ```bash
-cd server
+cd frontend
 npm run dev
 ```
 <h3>Frontend</h3>
 
 ```bash
-cd client
+cd frontend
 npm run dev
 ```
 <h2>Application URLs</h2>
 <p><b>Frontend</b></p>
 
 ```
-http://localhost:5173
+http://localhost:8080
 ```
 
 <p><b>Backend</b></p>
 
 ```
 http://localhost:5000
-```
+``>
 <h2>Screenshots</h2>
 
 | Home | AI Assistant |
 |------|--------------|
-| Add Screenshot | Add Screenshot |
+| ![Home](assets/3.png) | ![AI Assistant](assets/4.png) |
 
 | Safe Route | Guardian Dashboard |
 |------------|-------------------|
@@ -205,7 +202,7 @@ http://localhost:5000
 
 ---
 
-<h2>🚀 Deployment</h2>
+<h2>Deployment</h2>
 
 ### Frontend
 
@@ -221,7 +218,7 @@ http://localhost:5000
 
 ---
 
-<h2>📱 Android App (Capacitor)</h2>
+<h2>Android App (Capacitor)</h2>
 
 ### Install Capacitor
 
@@ -262,7 +259,7 @@ npx cap open android
 
 ---
 
-<h2>📲 Android Permissions</h2>
+<h2>Android Permissions</h2>
 
 - Internet
 - Fine Location
@@ -277,7 +274,7 @@ npx cap open android
 
 ---
 
-<h2>🔒 Security Features</h2>
+<h2>Security Features</h2>
 
 - JWT Authentication
 - Google OAuth
@@ -286,10 +283,7 @@ npx cap open android
 - Secure API Communication
 - Password Encryption
 - Role-Based Guardian Access
-
----
-
-<h2>🛣️ Roadmap</h2>
+<h2>Roadmap</h2>
 
 - AI Risk Prediction
 - Background Threat Detection
@@ -303,13 +297,6 @@ npx cap open android
 - Multi-language AI Assistant
 - Emergency Call Automation
 - Anonymous Community Reporting
-
----
-
-<h2>📄 License</h2>
-
+<h2>License</h2>
 This project is developed for educational, research, and social impact purposes.
-
----
-
-<h2 align="center">⭐ If you found this project helpful, consider giving it a Star!</h2>
+<h2 align="center">If you found this project helpful, consider giving it a Star!</h2>
