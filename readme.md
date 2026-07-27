@@ -215,7 +215,7 @@ Android Permissions</h2>
 
 ⸻
 
-Future Scope</h2>
+<h2>Future Scope</h2>
 
 * Background AI Monitoring
 * AI Risk Prediction
