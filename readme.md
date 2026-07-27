@@ -10,20 +10,8 @@ https://safe-her-ai-blush.vercel.app
 <p>The backend is deployed on Render, which automatically goes to sleep after a period of inactivity. On the first visit, it may take <b>1-2 minutes</b> for the backend to wake up. Please wait briefly before using the application.</p>
 
 <h2>🏗️ System Architecture</h2>
-
-<p align="center">
-Frontend (React + TypeScript) ⇄ Express API ⇄ MongoDB Atlas<br>
-                             │<br>
-        Google OAuth • Firebase Auth • Socket.IO<br>
-                             │<br>
-AI Assistant • Safe Routes • Live Tracking • Emergency Services
-</p>
-
----
-
-<h2>✨ Features</h2>
-
-<h3>👩 User Safety Features</h3>
+<h2>Features</h2>
+<h3>User Safety Features</h3>
 
 - AI Safety Assistant
 - Live Location Sharing
@@ -40,11 +28,7 @@ AI Assistant • Safe Routes • Live Tracking • Emergency Services
 - Real-time Notifications
 - Secure Authentication
 - Responsive Glassmorphism UI
-
----
-
-<h3>🛡️ Guardian Features</h3>
-
+<h3>Guardian Features</h3>
 - Guardian Login
 - Live User Tracking
 - Real-time Map Monitoring
@@ -53,10 +37,7 @@ AI Assistant • Safe Routes • Live Tracking • Emergency Services
 - Emergency Navigation
 - User Activity Status
 - Emergency Notification System
-
----
-
-<h3>🤖 AI Features</h3>
+<h3>AI Features</h3>
 
 - AI Safety Assistant
 - Natural Language Conversations
@@ -66,10 +47,7 @@ AI Assistant • Safe Routes • Live Tracking • Emergency Services
 - Hands-free Voice Interaction
 - AI Safety Recommendations
 - Intelligent Risk Assistance
-
----
-
-<h3>📍 Safety & Navigation</h3>
+<h3>Safety & Navigation</h3>
 
 - Safe Route Navigation
 - Live GPS Tracking
@@ -78,11 +56,7 @@ AI Assistant • Safe Routes • Live Tracking • Emergency Services
 - Emergency Route Assistance
 - Ride Monitoring
 - Interactive Maps
-
----
-
-<h2>🛠️ Technology Stack</h2>
-
+<h2>Technology Stack</h2>
 <h3>Frontend</h3>
 
 - React.js
@@ -95,9 +69,6 @@ AI Assistant • Safe Routes • Live Tracking • Emergency Services
 - React Hook Form
 - Leaflet Maps
 - Axios
-
----
-
 <h3>Backend</h3>
 
 - Node.js
@@ -109,9 +80,6 @@ AI Assistant • Safe Routes • Live Tracking • Emergency Services
 - Google OAuth
 - Firebase Authentication
 - REST APIs
-
----
-
 <h3>Artificial Intelligence</h3>
 
 - Google Gemini AI
@@ -120,19 +88,13 @@ AI Assistant • Safe Routes • Live Tracking • Emergency Services
 - Text-to-Speech
 - AI Safety Assistance
 - Prompt Engineering
-
----
-
 <h3>Database & Cloud</h3>
 
 - MongoDB Atlas
 - Cloudinary
 - Render
 - Vercel
-
----
-
-<h2>📂 Project Structure</h2>
+<h2>Project Structure</h2>
 
 ```text
 SafeHer-AI/
@@ -158,37 +120,27 @@ SafeHer-AI/
 
 ---
 
-<h2>⚙️ Installation</h2>
-
+<h2>Installation</h2>
 <h3>Clone Repository</h3>
 
 ```bash
 git clone https://github.com/yourusername/SafeHer-AI.git
 cd SafeHer-AI
 ```
-
----
-
 <h3>Install Dependencies</h3>
-
-### Client
+<p>Client</p>
 
 ```bash
 cd client
 npm install
 ```
-
-### Server
+<p>Server</p>
 
 ```bash
 cd ../server
 npm install
 ```
-
----
-
-<h2>🔐 Environment Variables</h2>
-
+<h2>Environment Variables</h2>
 <h3>Server (.env)</h3>
 
 ```env
@@ -205,9 +157,6 @@ GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
 FRONTEND_URL=http://localhost:5173
 ```
-
----
-
 <h3>Client (.env)</h3>
 
 ```env
@@ -219,46 +168,32 @@ VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
 VITE_FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
 VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
 ```
-
----
-
-<h2>▶️ Running the Project</h2>
-
+<h2>Running the Project</h2>
 <h3>Backend</h3>
 
 ```bash
 cd server
 npm run dev
 ```
-
----
-
 <h3>Frontend</h3>
 
 ```bash
 cd client
 npm run dev
 ```
-
----
-
-<h2>🌐 Application URLs</h2>
-
-**Frontend**
+<h2>Application URLs</h2>
+<p><b>Frontend</b></p>
 
 ```
 http://localhost:5173
 ```
 
-**Backend**
+<p><b>Backend</b></p>
 
 ```
 http://localhost:5000
 ```
-
----
-
-<h2>📸 Screenshots</h2>
+<h2>Screenshots</h2>
 
 | Home | AI Assistant |
 |------|--------------|
