@@ -177,9 +177,10 @@ http://localhost:5000
 ```
 <h2>Screenshots</h2>
 
-![SS1](assets/3.png)
-
-![SS2](assets/4.png)
+<p align="center">
+  <img src="assets/3.png" alt="SS1" width="48%">
+  <img src="assets/4.png" alt="SS2" width="48%">
+</p>
 <h2>Deployment</h2>
 
 ### Frontend
