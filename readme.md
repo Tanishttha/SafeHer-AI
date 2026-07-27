@@ -9,7 +9,7 @@ https://safe-her-ai-blush.vercel.app
 ```
 <p>The backend is deployed on Render, which automatically goes to sleep after a period of inactivity. On the first visit, it may take <b>1-2 minutes</b> for the backend to wake up. Please wait briefly before using the application.</p>
 
-![System Architecture](assets/2.png)
+![System Architecture](assets/1.png)
 <h2>Features</h2>
 <h3>User Safety Features</h3>
 
@@ -98,10 +98,7 @@ https://safe-her-ai-blush.vercel.app
 <h2>Project Structure</h2>
 
 
-![Project Structure](assets/project structure 2.png)
-
----
-
+![Project Structure](assets/2.png)
 <h2>Installation</h2>
 <h3>Clone Repository</h3>
 
@@ -137,13 +134,10 @@ PORT=5000
 Backend_URL=http://localhost:8080
 API_BASE_URL=http://localhost:5000
 
-# ---------- DATABASE ----------
 MONGODB_URI=YOUR_MONGODB_URI
 
-# ---------- BCRYPT ----------
 BCRYPT_SALT_ROUNDS=12
 
-# ---------- FIREBASE CLOUD MESSAGING ----------
 FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
 FIREBASE_Backend_EMAIL=YOUR_FIREBASE_CLIENT_EMAIL
 FIREBASE_PRIVATE_KEY="YOUR_FIREBASE_PRIVATE_KEY"
@@ -165,7 +159,7 @@ SOCKET_CORS_ORIGIN=http://localhost:8080
 <h3>Backend</h3>
 
 ```bash
-cd frontend
+cd backend
 npm run dev
 ```
 <h3>Frontend</h3>
@@ -188,20 +182,9 @@ http://localhost:5000
 ``>
 <h2>Screenshots</h2>
 
-| Home | AI Assistant |
-|------|--------------|
-| ![Home](assets/3.png) | ![AI Assistant](assets/4.png) |
+![SS1](assets/3.png)
 
-| Safe Route | Guardian Dashboard |
-|------------|-------------------|
-| Add Screenshot | Add Screenshot |
-
-| SOS | Live Tracking |
-|-----|---------------|
-| Add Screenshot | Add Screenshot |
-
----
-
+![SS2](assets/4.png)
 <h2>Deployment</h2>
 
 ### Frontend
