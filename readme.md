@@ -22,14 +22,14 @@ Guardian Features</h3>
 * Multiple Connected Users
 * Instant Status Updates
 * Google Maps Navigation
-AI Assistant</h3>
+<h3>AI Assistant</h3>
 
 * Voice Conversation
 * Speech-to-Text
 * Text-to-Speech
 * AI Safety Guidance
 * Hands-free Interaction
-Tech Stack</h2>
+<h3>Tech Stack</h2>
 
 Frontend
 
