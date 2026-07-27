@@ -9,7 +9,7 @@ https://safe-her-ai-blush.vercel.app
 ```
 <p>The backend is deployed on Render, which automatically goes to sleep after a period of inactivity. On the first visit, it may take <b>1-2 minutes</b> for the backend to wake up. Please wait briefly before using the application.</p>
 
-<h2>🏗️ System Architecture</h2>
+<![System Architecture](assets/1.png)
 <h2>Features</h2>
 <h3>User Safety Features</h3>
 
