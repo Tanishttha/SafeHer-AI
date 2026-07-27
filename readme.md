@@ -129,7 +129,7 @@ VITE_GEOAPIFY_API_KEY=YOUR_GEOAPIFY_API_KEY
 ```env
 NODE_ENV=development
 PORT=5000
-Backend_URL=http://localhost:8080
+CLIENT_URL=http://localhost:8080
 API_BASE_URL=http://localhost:5000
 
 MONGODB_URI=YOUR_MONGODB_URI
@@ -140,17 +140,14 @@ FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
 FIREBASE_Backend_EMAIL=YOUR_FIREBASE_CLIENT_EMAIL
 FIREBASE_PRIVATE_KEY="YOUR_FIREBASE_PRIVATE_KEY"
 
-# ---------- GROQ AI CHATBOT ----------
 GROQ_API_KEY=YOUR_GROQ_API_KEY
 GROQ_MODEL=llama-3.3-70b-versatile
 GROQ_API_URL=https://api.groq.com/openai/v1/chat/completions
 
-# ---------- RATE LIMITING ----------
 RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX=200
 SOS_RATE_LIMIT_MAX=100
 
-# ---------- SOCKET.IO ----------
 SOCKET_CORS_ORIGIN=http://localhost:8080
 ```
 <h2>Running the Project</h2>
@@ -177,7 +174,7 @@ http://localhost:8080
 
 ```
 http://localhost:5000
-``>
+```
 <h2>Screenshots</h2>
 
 ![SS1](assets/3.png)
