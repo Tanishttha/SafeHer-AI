@@ -13,7 +13,7 @@
 * Safety Score Dashboard
 * Real-time Location Updates
 * Modern Glassmorphism UI
-Guardian Features</h3>
+<h3>Guardian Features</h3>
 
 * Guardian Login
 * Live User Tracking
