@@ -30,8 +30,7 @@
 * AI Safety Guidance
 * Hands-free Interaction
 <h3>Tech Stack</h2>
-
-Frontend
+<h3>Frontend</h3>
 
 * React.js
 * TypeScript
@@ -40,8 +39,7 @@ Frontend
 * Tailwind CSS
 * Framer Motion
 * Leaflet Maps
-
-Backend
+<h3>Backend</h3>
 
 * Node.js
 * Express.js
@@ -49,14 +47,12 @@ Backend
 * Socket.IO
 * JWT Authentication
 * Google OAuth
-
-AI
+<h3>AI</h3>
 
 * Google Gemini AI
 * Speech Recognition
 * Text-to-Speech
-
-Deployment
+<h3>Deployment</h3>
 
 * Vercel (Frontend)
 * Render (Backend)
