@@ -202,7 +202,7 @@ npx cap open android
 
 ⸻
 
-Android Permissions</h2>
+<h2>Android Permissions</h2>
 
 * Internet
 * Fine Location
