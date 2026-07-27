@@ -95,8 +95,6 @@ https://safe-her-ai-blush.vercel.app
 - Cloudinary
 - Render
 - Vercel
-<h2>Project Structure</h2>
-
 
 ![Project Structure](assets/2.png)
 <h2>Installation</h2>
