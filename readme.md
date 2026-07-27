@@ -182,80 +182,11 @@ http://localhost:5000
   <img src="assets/4.png" alt="SS2" width="48%">
 </p>
 <h2>Deployment</h2>
-
-### Frontend
-
-- Vercel
-
-### Backend
-
-- Render
-
-### Database
-
-- MongoDB Atlas
-
----
-
-<h2>Android App (Capacitor)</h2>
-
-### Install Capacitor
-
-```bash
-npm install @capacitor/core @capacitor/cli
-npm install @capacitor/android
-```
-
-### Initialize
-
-```bash
-npx cap init
-```
-
-### Build Project
-
-```bash
-npm run build
-```
-
-### Add Android
-
-```bash
-npx cap add android
-```
-
-### Sync Project
-
-```bash
-npx cap copy
-```
-
-### Open Android Studio
-
-```bash
-npx cap open android
-```
-
----
-
-<h2>Android Permissions</h2>
-
-- Internet
-- Fine Location
-- Background Location
-- Microphone
-- Notifications
-- Foreground Service
-- Wake Lock
-- Vibration
-- Camera (Optional)
-- Storage Access (Optional)
-
----
-
+<h4>Frontend - Vercel</h4>
+<h4>Backend - Render</h4>
+<h4>Database - MongoDB Atlas</h4>
 <h2>Security Features</h2>
 
-- JWT Authentication
 - Google OAuth
 - Firebase Authentication
 - Protected Routes
