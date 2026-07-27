@@ -9,7 +9,7 @@ https://safe-her-ai-blush.vercel.app
 ```
 <p>The backend is deployed on Render, which automatically goes to sleep after a period of inactivity. On the first visit, it may take <b>1-2 minutes</b> for the backend to wake up. Please wait briefly before using the application.</p>
 
-<![System Architecture](assets/1.png)
+![System Architecture](assets/1.png)
 <h2>Features</h2>
 <h3>User Safety Features</h3>
 
@@ -29,6 +29,7 @@ https://safe-her-ai-blush.vercel.app
 - Secure Authentication
 - Responsive Glassmorphism UI
 <h3>Guardian Features</h3>
+
 - Guardian Login
 - Live User Tracking
 - Real-time Map Monitoring
@@ -161,12 +162,7 @@ FRONTEND_URL=http://localhost:5173
 
 ```env
 VITE_API_URL=http://localhost:5000/api
-
-VITE_GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID
-
-VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
-VITE_FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
-VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+VITE_GEOAPIFY_API_KEY=YOUR_KEY
 ```
 <h2>Running the Project</h2>
 <h3>Backend</h3>
