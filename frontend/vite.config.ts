@@ -14,16 +14,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // NOTE: we intentionally do NOT use Vite's declarative `server.proxy` option here.
-  // @lovable.dev/vite-tanstack-config strips `server.proxy` (along with `server.cors`
-  // and `server.headers`) whenever it detects it is running inside a Lovable sandbox
-  // (see `cleanServerConfig` in its source). When that happens, requests to /api/*
-  // fall straight through to TanStack Start's own SSR request handler instead of being
-  // forwarded to the Express backend, which has no matching route for them and (since
-  // fetch() sends `Accept: application/json`, not `text/html`) responds with the
-  // misleading `{"error":"Only HTML requests are supported here"}` / 500.
-  // A real Vite *plugin* (registered below) is never touched by that config-stripping
-  // logic, so it reliably forwards /api/* to Express in every environment.
   plugins: [
     apiBackendProxyPlugin(),
     VitePWA({
