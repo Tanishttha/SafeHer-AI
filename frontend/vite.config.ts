@@ -69,9 +69,6 @@ export default defineConfig({
   ],
   vite: {
     server: {
-      // Some containerized/sandboxed environments don't support binding to the
-      // IPv6 wildcard address ("::") that this config normally defaults to,
-      // and fail with EAFNOSUPPORT. 0.0.0.0 works everywhere IPv4 is available.
       host: "0.0.0.0",
     },
   },
